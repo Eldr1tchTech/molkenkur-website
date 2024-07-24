@@ -1,0 +1,63 @@
+@import url('../assets/fonts.css');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    color: black;
+  }
+  
+  .header-title {
+    font-family: 'Lavishly-Yours', sans-serif;
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  
+  .nav-style {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-items {
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  .nav-items a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-items a:hover {
+    color: grey;
+  }
+  
+  /* Underline the active navigation item */
+  .nav-items.active a {
+    color: blacks;
+    text-decoration: underline;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .header-title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+  
+    .nav-style {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  
+    .nav-items {
+        margin: 10px 0;
+    }
+  }

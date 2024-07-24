@@ -1,0 +1,12 @@
+.App {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,0 +1,43 @@
+.footer-style {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.footer-group {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-group h4 {
+  margin-bottom: 10px;
+}
+
+.footer-group ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-group li {
+  margin-bottom: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .footer-style {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-group {
+    margin: 10px 0;
+  }
+}
+
+.no-link-style {
+  text-decoration: none;
+  color: white;
+}

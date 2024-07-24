@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr)); /* Adjust grid columns to fit the container */
+    gap: 20px; /* Add space between the cards */
+    padding: 20px; /* Add padding to the container */
+}

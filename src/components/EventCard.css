@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: row; /* Ensure the image and text are aligned horizontally */
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+    margin: 0; /* Remove margin from individual cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 200px; /* Lock the height to 200px */
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+
+.event-container:hover,
+.event-container.hovered {
+    transform: scale(1.03);
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.8);
+}
+
+.container-image {
+    margin: 0;
+    padding: 0;
+}
+
+.container-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.container-text {
+    margin-left: 10px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100%; /* Ensure the text container takes up the full height of the card */
+    overflow: hidden; /* Prevent scrolling and hide overflow */
+}
+
+.gradient-text {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding: 0px;
+    margin: 0px;
+    overflow: clip;
+    padding-right: 40px;
+    max-height: 100%; /* Ensure gradient text does not exceed container height */
+    overflow: hidden; /* Ensure no scrollbar appears */
+}
+
+.text-date {
+    color: grey;
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.text-cost {
+    text-align: right;
+    margin: 0px 10px 10px 0px;
+}
+
+.text-title {
+    margin: 0;
+    padding: 0;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.detail-view {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.detail-view.show {
+    display: block;
+    opacity: 1;
+}
+
+.detail-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #fff;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1050px; /* Adjust maximum width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    max-height: 90vh; /* Prevent content from exceeding viewport height */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
