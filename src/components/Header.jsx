@@ -12,22 +12,22 @@ function Header(props) {
             <nav>
                 <ul className="nav-style">
                     <li className={`nav-items ${currentPage === 'Home' ? 'active' : ''}`}>
-                        <Link to="/" onClick={() => setCurrentPage('Home')}>Home</Link>
+                        <Link to="/molkenkur-website/" onClick={() => setCurrentPage('Home')}>Home</Link>
                     </li>
                     <li className={`nav-items ${currentPage === 'Hochzeiten' ? 'active' : ''}`}>
-                        <Link to="/hochzeiten" onClick={() => setCurrentPage('Hochzeiten')}>Hochzeiten</Link>
+                        <Link to="/molkenkur-website/hochzeiten" onClick={() => setCurrentPage('Hochzeiten')}>Hochzeiten</Link>
                     </li>
                     <li className={`nav-items ${currentPage === 'Hotel' ? 'active' : ''}`}>
-                        <Link to="/hotel" onClick={() => setCurrentPage('Hotel')}>Hotel</Link>
+                        <Link to="/molkenkur-website/hotel" onClick={() => setCurrentPage('Hotel')}>Hotel</Link>
                     </li>
                     <li className={`nav-items ${currentPage === 'Restaurant' ? 'active' : ''}`}>
-                        <Link to="/restaurant" onClick={() => setCurrentPage('Restaurant')}>Restaurant</Link>
+                        <Link to="/molkenkur-website/restaurant" onClick={() => setCurrentPage('Restaurant')}>Restaurant</Link>
                     </li>
                     <li className={`nav-items ${currentPage === 'Tagungen' ? 'active' : ''}`}>
-                        <Link to="/tagungen" onClick={() => setCurrentPage('Tagungen')}>Tagungen</Link>
+                        <Link to="/molkenkur-website/tagungen" onClick={() => setCurrentPage('Tagungen')}>Tagungen</Link>
                     </li>
                     <li className={`nav-items ${currentPage === 'Events' ? 'active' : ''}`}>
-                        <Link to="/events" onClick={() => setCurrentPage('Events')}>Events</Link>
+                        <Link to="/molkenkur-website/events" onClick={() => setCurrentPage('Events')}>Events</Link>
                     </li>
                 </ul>
             </nav>

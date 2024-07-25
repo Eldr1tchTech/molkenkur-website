@@ -26,7 +26,7 @@ function Footer() {
                 </ul>
             </div>
             <div className='footer-group'>
-                <Link to="/datenschutz"><h4 className='no-link-style'>Datenschutz</h4></Link>
+                <Link to="/molkenkur-website/datenschutz"><h4 className='no-link-style'>Datenschutz</h4></Link>
             </div>
         </footer>
     );
