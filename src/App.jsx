@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Hochzeiten from './pages/Hochzeiten.jsx';
 import Hotel from './pages/Hotel.jsx';
 import Restaurant from './pages/Restaurant.jsx';
@@ -10,17 +10,17 @@ import Datenschutz from './pages/Datenschutz.jsx';
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path='/molkenkur-website/' element={<Home />} />
-          <Route path='/molkenkur-website/hochzeiten' element={<Hochzeiten />} />
-          <Route path='/molkenkur-website/hotel' element={<Hotel />} />
-          <Route path='/molkenkur-website/restaurant' element={<Restaurant />} />
-          <Route path='/molkenkur-website/tagungen' element={<Tagungen />} />
-          <Route path='/molkenkur-website/events' element={<Events />} />
-          <Route path='/molkenkur-website/datenschutz' element={<Datenschutz />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/hochzeiten' element={<Hochzeiten />} />
+          <Route path='/hotel' element={<Hotel />} />
+          <Route path='/restaurant' element={<Restaurant />} />
+          <Route path='/tagungen' element={<Tagungen />} />
+          <Route path='/events' element={<Events />} />
+          <Route path='/datenschutz' element={<Datenschutz />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
